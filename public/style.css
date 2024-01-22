@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* width and height set includes content, padding, and border, making sizing more predictable */
+}
+
+body {
+  background: linear-gradient(135deg, #67d2ef, #5b548a);
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+h1 {
+  margin: 100px auto 10px;
+}
+
+/* make input round + no border */
+#search {
+  padding: 10px;
+  margin: 10px 0px;
+  border: none;
+  border-radius: 20px;
+  width: 350px;
+}
+
+/* remove default outline styling */
+#search:focus {
+  outline: none;
+}
+
+#my-btn {
+  color: #6e6e6e;
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  border-radius: 20px;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+/* show transition effect on hover, btn changes color after 0.3s */
+#my-btn:hover { 
+  opacity: 1;
+  background-color: #000;
+  color: #fff;
+}
+
+/* input and button will be next to each other */
+#search-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* city "card" will show in column instead of row */
+#city-info {
+  margin: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#temperature {
+  font-size: 3em;
+}
+
+#city {
+  padding: 5px;
+  font-size: 24px;
+}
+
+/* will show next to each other */
+#additional-info {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+#humidity {
+  margin: 10px 18px;
+}
+
+#real-sensation {
+  margin: 10px 24px;
+} 
+
+.fa-temperature-three-quarters {
+  margin: 10px 30px;
+}
+
+.fa-water {
+  margin: 10px 24px;
+}
+
+.additional-info-wrap {
+  margin: 1em;
+}
+
+#error-message {
+  width: 300px;
+  margin: auto;
+  padding: 15px;
+  text-align: center;
+  font-size: 15px;
+  color: #fff;
+  background-color: #D8000C;
+}
+
+/* will apply to error panel to hide after a few seconds */
+.hide {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  #search {
+    width: 150px;
+  }
+}
