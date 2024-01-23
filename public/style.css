@@ -4,6 +4,7 @@
   box-sizing: border-box; /* width and height set includes content, padding, and border, making sizing more predictable */
 }
 
+/* for a color gradient background */
 body {
   background: linear-gradient(135deg, #67d2ef, #5b548a);
   color: #fff;
@@ -11,6 +12,7 @@ body {
   font-size: 16px;
 }
 
+/* rainbow img and app name will be center and on top of each other */
 #header {
   margin: 1.5em;
   display: flex;
@@ -19,7 +21,7 @@ body {
   align-items: center;
 }
 
-#rainbow-img {
+#cloud-img {
   margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
@@ -39,7 +41,7 @@ h1 {
   width: 350px;
 }
 
-/* remove default outline styling */
+/* remove default outline styling on focus */
 #search:focus {
   outline: none;
 }
@@ -47,7 +49,7 @@ h1 {
 #my-btn {
   color: #6e6e6e;
   padding: 10px;
-  margin: auto 10px;
+  margin: 10px;
   border: none;
   border-radius: 20px;
   opacity: 0.8;
@@ -83,7 +85,6 @@ h1 {
 }
 
 #city {
-  /* padding: 5px; */
   font-size: 24px;
 }
 
@@ -130,17 +131,8 @@ h1 {
 
 /* will apply to error panel to hide after a few seconds */
 .hide {
-  display: none !important;
+  display: none !important; /* added !important so that FontAwesome styles are not prioritized over mine */
 }
-
-/* @media (min-width: 320px) {
-  #additional-info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-} */
 
 @media (max-width: 768px) {
   #search {
@@ -153,4 +145,13 @@ h1 {
     align-items: center;
     flex-direction: column;
   }
+
+  h1 { 
+    font-size: 24px;
+  }
+
+  #cloud-img {
+    width: 100px;
+  }
+
 }
