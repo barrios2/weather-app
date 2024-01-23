@@ -3,6 +3,8 @@
 Weather app built with vanilla JavaScript. This is a project for HackYourFuture corresponding to the APIs module.
 This app shows current weather and other information once the user has entered a valid city name, otherwise it will show an error message.
 
+<img src='https://i.pinimg.com/originals/dd/80/d0/dd80d0d7a10ea8d4dcda508b4e58616d.png' alt='initial page'/>
+
 ## Demo
 
 The deployed version of this app is available [**here**](INSERT LINK HERE)
