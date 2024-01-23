@@ -5,7 +5,7 @@ This app shows current weather and other information once the user has entered a
 
 ## Demo
 
-The deployed version of this app is available [**here**](INSERT LINK HERE)
+The deployed version of this app is available [**here**](https://barrios2.github.io/weather-app/)
 
 ## Structure
 
