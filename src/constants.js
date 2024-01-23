@@ -5,9 +5,9 @@
  */
 export const KEY = 'ddcd5971c6039bbcee33f5aa0f819234'; // API key
 export const API = `https://api.openweathermap.org/data/2.5/weather?units=metric`; // includes temp in celsius
-
+export const WEATHERY_IMG = 'https://static.vecteezy.com/system/resources/previews/024/190/108/original/cute-cartoon-cloud-kawaii-weather-illustrations-for-kids-free-png.png';
 export const HEADER_ID = 'header';
-export const RAINBOW_IMG_ID = 'rainbow-img';
+export const CLOUD_IMG_ID = 'cloud-img';
 export const SEARCH_CONTAINER_ID = 'search-container';
 export const SEARCH_ID = 'search';
 export const MY_BTN_ID = 'my-btn';

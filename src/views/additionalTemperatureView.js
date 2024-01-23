@@ -11,9 +11,11 @@ import {
   HIDE_CLASS
 } from '../constants.js';
 
+// this function creates and returns container that holds additional weather info
 export const additionalTempInfo = () => {
   const container = document.createElement('div');
 
+  // defining HTML structure inside the container
   container.innerHTML = `
   <div class=${ADDITIONAL_INFO_CLASS}>
     <p id=${HUMIDITY_ID}></p>

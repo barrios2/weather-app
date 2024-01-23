@@ -16,14 +16,12 @@ import {
 } from './constants.js';
 
 async function fetchData(url, cityName) {
-  const body = document.querySelector('body');
   try {
     if (!cityName) {
       throw new Error('Please enter a city name');
     }
     else {
       const response = await fetch(url + `&q=${cityName}` + `&appid=${KEY}`);
-
       if (response.ok) {
         const data = await response.json(); 
         return data;
@@ -32,9 +30,8 @@ async function fetchData(url, cityName) {
         throw new Error('Enter a valid city name');
       }
     } 
-  } catch (error) {
-    const errorContainer = renderError(error);
-    body.appendChild(errorContainer);
+  } catch (error) { // if an error occurs, render error container
+    renderError(error);
   }
 }
 
@@ -49,6 +46,7 @@ export function fetchAndPopulateData(url, cityName) {
   const weatherIcon = document.getElementById(WEATHER_ICON_ID);
   const icons = document.querySelectorAll('.fa-solid');
 
+  // calls fetchData func to retrieve the requested info and populate it
   fetchData(url, cityName).then(data => {
     weatherIcon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
     weatherIcon.alt = 'weather condition icon';
@@ -70,4 +68,4 @@ function main() {
   searchWeather(); // is listening for click on search button (after initPage because button needs to be created first)
 }
 
-main()
+main() // initiates the execution of the app

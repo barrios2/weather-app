@@ -6,6 +6,7 @@ import {
   WEATHER_ICON_ID
 } from '../constants.js';
 
+// creates and returns container that represents main weather information
 export const cityWeather = () => {
   const container = document.createElement('div');
   container.setAttribute('id', `${CITY_INFO_ID}`);
