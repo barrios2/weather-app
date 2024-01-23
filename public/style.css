@@ -11,14 +11,29 @@ body {
   font-size: 16px;
 }
 
+#header {
+  margin: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#rainbow-img {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 150px;
+}
+
 h1 {
-  margin: 100px auto 10px;
+  margin: 12px auto;
 }
 
 /* make input round + no border */
 #search {
   padding: 10px;
-  margin: 10px 0px;
+  margin: auto;
   border: none;
   border-radius: 20px;
   width: 350px;
@@ -32,12 +47,13 @@ h1 {
 #my-btn {
   color: #6e6e6e;
   padding: 10px;
-  margin: 10px;
+  margin: auto 10px;
   border: none;
   border-radius: 20px;
   opacity: 0.8;
   transition: 0.3s;
 }
+
 /* show transition effect on hover, btn changes color after 0.3s */
 #my-btn:hover { 
   opacity: 1;
@@ -55,7 +71,7 @@ h1 {
 
 /* city "card" will show in column instead of row */
 #city-info {
-  margin: 1em;
+  margin: 2em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,7 +83,7 @@ h1 {
 }
 
 #city {
-  padding: 5px;
+  /* padding: 5px; */
   font-size: 24px;
 }
 
@@ -75,15 +91,19 @@ h1 {
 #additional-info {
   display: flex;
   justify-content: center;
-  margin: 20px;
+  margin: 2em;
+}
+
+.additional-info-wrap {
+  margin: 1em 5em;
 }
 
 #humidity {
-  margin: 10px 18px;
+  margin: 10px 22px;
 }
 
 #real-sensation {
-  margin: 10px 24px;
+  margin: 10px 20px;
 } 
 
 .fa-temperature-three-quarters {
@@ -94,8 +114,8 @@ h1 {
   margin: 10px 24px;
 }
 
-.additional-info-wrap {
-  margin: 1em;
+.fa-solid {
+  font-size: 25px;
 }
 
 #error-message {
@@ -113,8 +133,24 @@ h1 {
   display: none !important;
 }
 
+/* @media (min-width: 320px) {
+  #additional-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+} */
+
 @media (max-width: 768px) {
   #search {
     width: 150px;
+  }
+
+  #additional-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 }

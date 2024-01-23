@@ -4,20 +4,26 @@ import {
   HUMIDITY_ID, 
   REAL_SENSATION_ID,
   HUMIDITY_TEXT_ID,
-  SENSATION_TEXT_ID
-} from "../constants.js";
+  SENSATION_TEXT_ID,
+  FA_SOLID_CLASS,
+  FA_WATER_CLASS,
+  FA_TEMPERATURE_CLASS,
+  HIDE_CLASS
+} from '../constants.js';
 
 export const additionalTempInfo = () => {
   const container = document.createElement('div');
 
   container.innerHTML = `
-  <div>
-    <p id=${HUMIDITY_ID} class=${ADDITIONAL_INFO_CLASS}></p>
-    <p id=${HUMIDITY_TEXT_ID}></p>
+  <div class=${ADDITIONAL_INFO_CLASS}>
+    <p id=${HUMIDITY_ID}></p>
+    <h4 id=${HUMIDITY_TEXT_ID}></h4>
+    <i class='${HIDE_CLASS} ${FA_SOLID_CLASS} ${FA_WATER_CLASS}'></i>
   </div>
-  <div>
-    <p id=${REAL_SENSATION_ID} class=${ADDITIONAL_INFO_CLASS}></p>
-    <p id=${SENSATION_TEXT_ID}></p>
+  <div class=${ADDITIONAL_INFO_CLASS}>
+    <p id=${REAL_SENSATION_ID}></p>
+    <h4 id=${SENSATION_TEXT_ID}></h4>
+    <i class='${HIDE_CLASS} ${FA_SOLID_CLASS} ${FA_TEMPERATURE_CLASS}'></i>
   </div>
   `
   container.setAttribute('id', `${ADDITIONAL_INFO_ID}`);  

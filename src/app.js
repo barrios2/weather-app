@@ -4,14 +4,15 @@ import { renderError } from './views/errorMessageView.js';
 import { initPage } from './pages/startPage.js';
 import { searchWeather } from './views/searchView.js';
 import { 
-  CITY_ID, 
+  CITY_ID,
   HUMIDITY_ID, 
   HUMIDITY_TEXT_ID, 
   KEY, 
   REAL_SENSATION_ID, 
   SENSATION_TEXT_ID, 
   TEMPERATURE_ID, 
-  WEATHER_CONDITION_ID 
+  WEATHER_CONDITION_ID, 
+  WEATHER_ICON_ID
 } from './constants.js';
 
 async function fetchData(url, cityName) {
@@ -28,7 +29,7 @@ async function fetchData(url, cityName) {
         return data;
       }
       else {
-        throw new Error(`Oops! We couldn't find the information, try again. Status: ${response.status}`);
+        throw new Error('Enter a valid city name');
       }
     } 
   } catch (error) {
@@ -45,15 +46,22 @@ export function fetchAndPopulateData(url, cityName) {
   const humidity = document.getElementById(HUMIDITY_ID);
   const sensationText = document.getElementById(SENSATION_TEXT_ID);
   const humidityText = document.getElementById(HUMIDITY_TEXT_ID);
-  
+  const weatherIcon = document.getElementById(WEATHER_ICON_ID);
+  const icons = document.querySelectorAll('.fa-solid');
+
   fetchData(url, cityName).then(data => {
+    weatherIcon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+    weatherIcon.alt = 'weather condition icon';
     temperature.textContent = data.main.temp.toFixed() + '°C';
     city.textContent = data.name;
     realSensation.innerHTML = `${data.main.feels_like.toFixed()}°C`;
     weatherCondition.textContent = data.weather[0].main;
     humidity.textContent = data.main.humidity + '%';
-    sensationText.textContent = 'Feels like';
-    humidityText.textContent = 'Humidity';
+    sensationText.textContent = 'feels like';
+    humidityText.textContent = 'humidity';
+    icons.forEach(icon => {
+      icon.classList.remove('hide');
+    });
   })
 }
 
