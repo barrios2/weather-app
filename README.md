@@ -21,8 +21,8 @@ The deployed version of this app is available [**here**](INSERT LINK HERE)
 │ │ ├── searchView.js
 │ │ └── temperatureView.js
 │ ├── app.js
-│ ├── constants.js
-│ └── index.html
+│ └── constants.js
+├── index.html
 ├── package-lock.json
 ├── package.json
 └── README.md
